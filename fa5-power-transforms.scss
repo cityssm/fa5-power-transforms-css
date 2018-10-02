@@ -115,7 +115,9 @@ $base-width-half: $base-width / 2;
 
   $glow-default: #fff;
   $bg-danger-color: #f2dede;
+  $bg-warning-color: #fcf8e3;
   $bg-success-color: #dff0d8;
+  $bg-info-color: #d9edf7;
 
   &[data-fa-transform*='glow'] {
     text-shadow: -0.1em 0 0 $glow-default,
@@ -140,6 +142,19 @@ $base-width-half: $base-width / 2;
             0.1em -0.1em 0 $bg-danger-color;
     }
 
+		.alert-warning &,
+    .bg-warning &,
+    .list-group-item-warning & {
+      text-shadow: -0.1em 0 0 $bg-warning-color,
+            0.1em 0 $bg-warning-color,
+            0 0.1em 0 $bg-warning-color,
+            0 -0.1em 0 $bg-warning-color,
+            0.1em 0.1em 0 $bg-warning-color,
+            -0.1em -0.1em 0 $bg-warning-color,
+            -0.1em 0.1em 0 $bg-warning-color,
+            0.1em -0.1em 0 $bg-warning-color;
+    }
+
     .alert-success &,
     .bg-success &,
     .list-group-item-success & {
@@ -152,5 +167,18 @@ $base-width-half: $base-width / 2;
             -0.1em 0.1em 0 $bg-success-color,
             0.1em -0.1em 0 $bg-success-color;
       }
+
+			.alert-info &,
+	    .bg-info &,
+	    .list-group-item-info & {
+	  		text-shadow: -0.1em 0 0 $bg-info-color,
+	            0.1em 0 $bg-info-color,
+	            0 0.1em 0 $bg-info-color,
+	            0 -0.1em 0 $bg-info-color,
+	            0.1em 0.1em 0 $bg-info-color,
+	            -0.1em -0.1em 0 $bg-info-color,
+	            -0.1em 0.1em 0 $bg-info-color,
+	            0.1em -0.1em 0 $bg-info-color;
+	      }
   }
 }
