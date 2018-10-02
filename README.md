@@ -13,7 +13,7 @@ This project attempts to recreate some of the key Power Transform features in st
 
 ## Which `data-fa-transform` options are recreated?
 
-`rotate`
+`rotate-n`
 - Supports whole numbers only, -359 to 359.
 
 `flip-h`, `flip-h`
@@ -22,15 +22,21 @@ This project attempts to recreate some of the key Power Transform features in st
 
 The Web Fonts version does offer [stacking](https://fontawesome.com/how-to-use/on-the-web/styling/stacking-icons) using the `.fa-stack` class, but the `.fa-layers` class is far more powerful.
 
-`shrink`, `grow`
+`shrink-n`, `grow-n`
 - Supports whole numbers from 1 to 16.
 
-`up`, `down`, `left`, `right`
+`up-n`, `down-n`, `left-n`, `right-n`
 - Supports whole numbers from 1 to 8.
+
+`data-fa-mask=""`
+- Slightly different than the Font Awesome 5 specification.
+- The existence of this attribute will **attempt** to set the icon's color to that of the background.
+- *If you choose to use `data-fa-mask`, you may need to add your own background color support.*
 
 `glow`
 - Adds an outline to the icon for some really fancy layering.
 - Defaults to white, with some Bootstrap 3 background color options.
+- *If you choose to use `glow`, you may need to add your own background color support.*
 
 ## I want to see it in action!
 

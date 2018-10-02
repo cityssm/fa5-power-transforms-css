@@ -1,55 +1,47 @@
 $base-width: 1.25em;
 $base-width-half: $base-width / 2;
 
-
 .fa-layers {
 	position: relative;
-  display: inline-block;
+	display: inline-block;
 	width: $base-width;
 	height: $base-width;
-  line-height: $base-width;
+	line-height: $base-width;
 	text-align: center;
-  vertical-align: middle;
-
+	vertical-align: middle;
 
 	&.fa-fw > * {
 		width: 100%;
 		height: 100%;
 	}
 
-
 	& > .fa,
+	& > .fa-layers-text,
 	& > .fab,
 	& > .fal,
 	& > .far,
-	& > .fas,
-	& > .fa-layers-text {
+	& > .fas {
 		position: absolute;
 		left: 0;
 		width: 100%;
 		line-height: inherit;
 		text-align: center;
 	}
-
-
 	@for $i from 1 through 8 {
 		& [data-fa-transform*='up-#{$i}'] {
 			top: -($i / 8 * 50%);
 		}
 	}
-
 	@for $i from 1 through 8 {
 		& [data-fa-transform*='down-#{$i}'] {
 			top: ($i / 8 * 50%);
 		}
 	}
-
 	@for $i from 1 through 8 {
 		& [data-fa-transform*='right-#{$i}'] {
 			left: ($i / 8 * 50%);
 		}
 	}
-
 	@for $i from 1 through 8 {
 		& [data-fa-transform*='left-#{$i}'] {
 			left: -($i / 8 * 50%);
@@ -57,29 +49,24 @@ $base-width-half: $base-width / 2;
 	}
 }
 
-
-
 .fa,
-.far,
-.fas,
+.fa-layers-text,
+.fab,
 .fal,
-.fa-layers-text {
-
+.far,
+.fas {
 	/*
 	 * ROTATE
 	 */
-
 	@for $i from 1 through 35 {
 		&[data-fa-transform*='rotate-#{$i * 10}'],
 		&[data-fa-transform*='rotate-#{$i * 10 - 360}'] {
 			transform: rotate(10deg * $i);
 		}
 	}
-
 	/*
 	 * FLIP
 	 */
-
 	&[data-fa-transform*='flip-h'] {
 		transform: scale(-1, 1);
 	}
@@ -91,94 +78,77 @@ $base-width-half: $base-width / 2;
 	&[data-fa-transform*='flip-h'][data-fa-transform*='flip-v'] {
 		transform: scale(-1, -1);
 	}
-
-
-
-  // shrink
-
+	// shrink
 	@for $i from 1 through 16 {
 		&[data-fa-transform*='shrink-#{$i}'] {
 			font-size: 1em - $i / 16;
 		}
 	}
-
 	@for $i from 1 through 16 {
 		&[data-fa-transform*='grow-#{$i}'] {
 			font-size: 1em + $i / 16;
 		}
 	}
+	// glow
+	$glow-default: #fff;
+	$bg-danger-color: #f2dede;
+	$bg-warning-color: #fcf8e3;
+	$bg-success-color: #dff0d8;
+	$bg-info-color: #d9edf7;
 
+	&[data-fa-mask] {
+		color: $glow-default;
 
-
-
-  // glow
-
-  $glow-default: #fff;
-  $bg-danger-color: #f2dede;
-  $bg-warning-color: #fcf8e3;
-  $bg-success-color: #dff0d8;
-  $bg-info-color: #d9edf7;
-
-  &[data-fa-transform*='glow'] {
-    text-shadow: -0.1em 0 0 $glow-default,
-        0.1em 0 $glow-default,
-        0 0.1em 0 $glow-default,
-        0 -0.1em 0 $glow-default,
-        0.1em 0.1em 0 $glow-default,
-        -0.1em -0.1em 0 $glow-default,
-        -0.1em 0.1em 0 $glow-default,
-        0.1em -0.1em 0 $glow-default;
-
-    .alert-danger &,
-    .bg-danger &,
-    .list-group-item-danger & {
-      text-shadow: -0.1em 0 0 $bg-danger-color,
-            0.1em 0 $bg-danger-color,
-            0 0.1em 0 $bg-danger-color,
-            0 -0.1em 0 $bg-danger-color,
-            0.1em 0.1em 0 $bg-danger-color,
-            -0.1em -0.1em 0 $bg-danger-color,
-            -0.1em 0.1em 0 $bg-danger-color,
-            0.1em -0.1em 0 $bg-danger-color;
-    }
+		.alert-danger &,
+		.bg-danger &,
+		.list-group-item-danger & {
+			color: $bg-danger-color;
+		}
 
 		.alert-warning &,
-    .bg-warning &,
-    .list-group-item-warning & {
-      text-shadow: -0.1em 0 0 $bg-warning-color,
-            0.1em 0 $bg-warning-color,
-            0 0.1em 0 $bg-warning-color,
-            0 -0.1em 0 $bg-warning-color,
-            0.1em 0.1em 0 $bg-warning-color,
-            -0.1em -0.1em 0 $bg-warning-color,
-            -0.1em 0.1em 0 $bg-warning-color,
-            0.1em -0.1em 0 $bg-warning-color;
-    }
+		.bg-warning &,
+		.list-group-item-warning & {
+			color: $bg-warning-color;
+		}
 
-    .alert-success &,
-    .bg-success &,
-    .list-group-item-success & {
-  		text-shadow: -0.1em 0 0 $bg-success-color,
-            0.1em 0 $bg-success-color,
-            0 0.1em 0 $bg-success-color,
-            0 -0.1em 0 $bg-success-color,
-            0.1em 0.1em 0 $bg-success-color,
-            -0.1em -0.1em 0 $bg-success-color,
-            -0.1em 0.1em 0 $bg-success-color,
-            0.1em -0.1em 0 $bg-success-color;
-      }
+		.alert-success &,
+		.bg-success &,
+		.list-group-item-success & {
+			color: $bg-success-color;
+		}
 
-			.alert-info &,
-	    .bg-info &,
-	    .list-group-item-info & {
-	  		text-shadow: -0.1em 0 0 $bg-info-color,
-	            0.1em 0 $bg-info-color,
-	            0 0.1em 0 $bg-info-color,
-	            0 -0.1em 0 $bg-info-color,
-	            0.1em 0.1em 0 $bg-info-color,
-	            -0.1em -0.1em 0 $bg-info-color,
-	            -0.1em 0.1em 0 $bg-info-color,
-	            0.1em -0.1em 0 $bg-info-color;
-	      }
-  }
+		.alert-info &,
+		.bg-info &,
+		.list-group-item-info & {
+			color: $bg-info-color;
+		}
+	}
+
+	&[data-fa-transform*='glow'] {
+		text-shadow: -0.1em 0 0 $glow-default, 0.1em 0 $glow-default, 0 0.1em 0 $glow-default, 0 -0.1em 0 $glow-default, 0.1em 0.1em 0 $glow-default, -0.1em -0.1em 0 $glow-default, -0.1em 0.1em 0 $glow-default, 0.1em -0.1em 0 $glow-default;
+
+		.alert-danger &,
+		.bg-danger &,
+		.list-group-item-danger & {
+			text-shadow: -0.1em 0 0 $bg-danger-color, 0.1em 0 $bg-danger-color, 0 0.1em 0 $bg-danger-color, 0 -0.1em 0 $bg-danger-color, 0.1em 0.1em 0 $bg-danger-color, -0.1em -0.1em 0 $bg-danger-color, -0.1em 0.1em 0 $bg-danger-color, 0.1em -0.1em 0 $bg-danger-color;
+		}
+
+		.alert-warning &,
+		.bg-warning &,
+		.list-group-item-warning & {
+			text-shadow: -0.1em 0 0 $bg-warning-color, 0.1em 0 $bg-warning-color, 0 0.1em 0 $bg-warning-color, 0 -0.1em 0 $bg-warning-color, 0.1em 0.1em 0 $bg-warning-color, -0.1em -0.1em 0 $bg-warning-color, -0.1em 0.1em 0 $bg-warning-color, 0.1em -0.1em 0 $bg-warning-color;
+		}
+
+		.alert-success &,
+		.bg-success &,
+		.list-group-item-success & {
+			text-shadow: -0.1em 0 0 $bg-success-color, 0.1em 0 $bg-success-color, 0 0.1em 0 $bg-success-color, 0 -0.1em 0 $bg-success-color, 0.1em 0.1em 0 $bg-success-color, -0.1em -0.1em 0 $bg-success-color, -0.1em 0.1em 0 $bg-success-color, 0.1em -0.1em 0 $bg-success-color;
+		}
+
+		.alert-info &,
+		.bg-info &,
+		.list-group-item-info & {
+			text-shadow: -0.1em 0 0 $bg-info-color, 0.1em 0 $bg-info-color, 0 0.1em 0 $bg-info-color, 0 -0.1em 0 $bg-info-color, 0.1em 0.1em 0 $bg-info-color, -0.1em -0.1em 0 $bg-info-color, -0.1em 0.1em 0 $bg-info-color, 0.1em -0.1em 0 $bg-info-color;
+		}
+	}
 }

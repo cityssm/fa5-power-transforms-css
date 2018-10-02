@@ -38,7 +38,7 @@
         <a href="https://fontawesome.com/how-to-use/on-the-web/styling/layering">Compare with the Font Awesome SVG + JS Examples</a>
       </p>
 
-  		<div class="fa-4x" style="">
+  		<div class="fa-4x">
   		  <span class="fa-layers fa-fw" style="background:MistyRose">
   		    <i class="fas fa-circle" style="color:Tomato"></i>
   		    <i class="fa-inverse fas fa-times" data-fa-transform="shrink-6"></i>
@@ -107,6 +107,36 @@
       				<span class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
       			</span>
       		</p>
+        </div>
+      </div>
+
+      <h2>Masking</h2>
+
+      <p>
+        Recreating <a href="https://fontawesome.com/how-to-use/on-the-web/styling/masking">masking using the exact Font Awesome 5 syntax</a> in CSS would be huge.
+        Every icon class would have to be considered.  It's not feasable.
+        Instead, similar functionality is provided with the <code>.fa-layers</code> class.
+        If the <code>data-fa-mask</code> attribute is present (regardless of what the attribute value is), the icon will be coloured the same colour as the background.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-4 text-center">
+          <span class="fa-layers fa-5x fa-fw bg-success">
+            <i class="fas fa-comment"></i>
+            <i class="fas fa-pencil-alt" data-fa-transform="shrink-10" data-fa-mask></i>
+          </span>
+        </div>
+        <div class="col-sm-4 text-center">
+          <span class="fa-layers fa-5x fa-fw bg-danger">
+            <i class="fas fa-circle"></i>
+            <i class="fab fa-facebook-f" data-fa-transform="shrink-3.5 down-1.6 right-1.25" data-fa-mask="fas fa-circle"></i>
+          </span>
+        </div>
+        <div class="col-sm-4 text-center">
+          <span class="fa-layers fa-5x fa-fw bg-info">
+            <i class="fas fa-square"></i>
+            <i class="fas fa-headphones" data-fa-transform="shrink-6" data-fa-mask="fas fa-square"></i>
+          </span>
         </div>
       </div>
 
