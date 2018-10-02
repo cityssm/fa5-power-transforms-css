@@ -10,3 +10,25 @@ The problem is, Power Transforms are only available to users of the SVG + JS ver
 At this time, I prefer the web fonts version for performance reasons.
 
 This project attempts to recreate some of the key Power Transform features in straight CSS.
+
+## What `data-fa-transform` options are recreated?
+
+`rotate`
+- Supports whole numbers only, -359 to 359.
+
+`flip-h`, `flip-h`
+
+### `.fa-layers`
+
+The Web Fonts version does offer [stacking](https://fontawesome.com/how-to-use/on-the-web/styling/stacking-icons) using the `.fa-stack` class, but the `.fa-layers` class is far more powerful.
+
+`shrink`, `grow`
+- Supports whole numbers from 1 to 16.
+
+`up`, `down`, `left`, `right`
+- Supports whole numbers from 1 to 8.
+
+`glow`
+- Adds an outline to the icon for some really fancy layering.
+
+[See the examples](https://cityssm.github.io/fa5-power-transforms-css/)
