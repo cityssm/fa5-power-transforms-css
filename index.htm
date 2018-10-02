@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>fa5-power-transforms-css Test Page</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="fa5-power-transforms.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>fa5-power-transforms-css Test Page</h1>
+
+      <h2>Rotating and Flipping</h2>
+
+      <p>
+        <a href="https://fontawesome.com/how-to-use/on-the-web/styling/power-transforms#rotating">See Font Awesome SVG + JS Examples</a>
+      </p>
+
+  		<div class="fa-4x">
+  		  <i class="fas fa-magic" data-fa-transform="rotate-90" style="background:MistyRose"></i>
+  		  <i class="fas fa-magic" data-fa-transform="rotate-180" style="background:MistyRose"></i>
+  		  <i class="fas fa-magic" data-fa-transform="rotate-270" style="background:MistyRose"></i>
+  		  <i class="fas fa-magic" data-fa-transform="rotate-30" style="background:MistyRose"></i>
+  		  <i class="fas fa-magic" data-fa-transform="rotate--30" style="background:MistyRose"></i>
+  		  <i class="fas fa-magic" data-fa-transform="flip-v" style="background:MistyRose"></i>
+  		  <i class="fas fa-magic" data-fa-transform="flip-h" style="background:MistyRose"></i>
+  		  <i class="fas fa-magic" data-fa-transform="flip-v flip-h" style="background:MistyRose"></i>
+  		</div>
+
+      <h2>Layering, Text, & Counters</h2>
+
+      <p>
+        <a href="https://fontawesome.com/how-to-use/on-the-web/styling/layering">See Font Awesome SVG + JS Examples</a>
+      </p>
+
+  		<div class="fa-4x" style="">
+  		  <span class="fa-layers fa-fw" style="background:MistyRose">
+  		    <i class="fas fa-circle" style="color:Tomato"></i>
+  		    <i class="fa-inverse fas fa-times" data-fa-transform="shrink-6"></i>
+  		  </span>
+
+  		  <span class="fa-layers fa-fw" style="background:MistyRose">
+  		    <i class="fas fa-bookmark"></i>
+  		    <i class="fa-inverse fas fa-heart" data-fa-transform="shrink-10 up-2" style="color:Tomato"></i>
+  		  </span>
+
+  		  <span class="fa-layers fa-fw" style="background:MistyRose">
+  		    <i class="fas fa-play" data-fa-transform="rotate--90 grow-2"></i>
+  		    <i class="fas fa-sun fa-inverse" data-fa-transform="shrink-10 up-2"></i>
+  		    <i class="fas fa-moon fa-inverse" data-fa-transform="shrink-11 down-4 left-4"></i>
+  		    <i class="fas fa-star fa-inverse" data-fa-transform="shrink-11 down-4 right-4"></i>
+  		  </span>
+
+  		  <span class="fa-layers fa-fw" style="background:MistyRose">
+  		    <i class="fas fa-calendar"></i>
+  		    <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3" style="font-weight:900">27</span>
+  		  </span>
+
+  		  <span class="fa-layers fa-fw" style="background:MistyRose">
+  		    <i class="fas fa-certificate"></i>
+  		    <span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11.5 rotate--30" style="font-weight:900">NEW</span>
+  		  </span>
+  		</div>
+
+
+      <h2>Layering with Glow</h2>
+
+      <p>
+        A special "glow" trasform is added to outline icons.
+        The outline colour defaults to white, but also takes into account some Bootstrap 3 background classes on parent elements.
+      </p>
+
+      <div class="row">
+        <div class="col-sm-3">
+      		<p class="alert alert-success text-center">
+      			<span class="fa-layers fa-fw fa-4x">
+      				<span class="fas fa-file-alt"></span>
+      				<span class="fas fa-plus" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
+      			</span>
+      		</p>
+        </div>
+        <div class="col-sm-3">
+      		<p class="alert alert-warning text-center">
+      			<span class="fa-layers fa-fw fa-4x">
+      				<span class="fas fa-file-alt"></span>
+      				<span class="fas fa-save" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
+      			</span>
+      		</p>
+        </div>
+        <div class="col-sm-3">
+      		<p class="alert alert-danger text-center">
+      			<span class="fa-layers fa-fw fa-4x">
+      				<span class="fas fa-file-alt"></span>
+      				<span class="fas fa-trash" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
+      			</span>
+      		</p>
+        </div>
+        <div class="col-sm-3">
+      		<p class="alert alert-info text-center">
+      			<span class="fa-layers fa-fw fa-4x">
+      				<span class="fas fa-file-alt"></span>
+      				<span class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
+      			</span>
+      		</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
