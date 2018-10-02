@@ -11,7 +11,7 @@ At this time, I prefer the web fonts version for performance reasons.
 
 This project attempts to recreate some of the key Power Transform features in straight CSS.
 
-## What `data-fa-transform` options are recreated?
+## Which `data-fa-transform` options are recreated?
 
 `rotate`
 - Supports whole numbers only, -359 to 359.
@@ -30,5 +30,8 @@ The Web Fonts version does offer [stacking](https://fontawesome.com/how-to-use/o
 
 `glow`
 - Adds an outline to the icon for some really fancy layering.
+- Defaults to white, with some Bootstrap 3 background color options.
+
+## I want to see it in action!
 
 [See the examples](https://cityssm.github.io/fa5-power-transforms-css/)
