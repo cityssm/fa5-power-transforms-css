@@ -15,10 +15,17 @@
     <div class="container">
       <h1>fa5-power-transforms-css Test Page</h1>
 
+      <a href="https://github.com/cityssm/fa5-power-transforms-css"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
       <h2>Rotating and Flipping</h2>
 
       <p>
         <a href="https://fontawesome.com/how-to-use/on-the-web/styling/power-transforms#rotating">Compare with the Font Awesome SVG + JS Examples</a>
+      </p>
+
+      <p class="alert alert-info">
+        <strong>Difference:</strong>
+        Font Awesome 5 Power Transforms rotations do not rotate the background.  In the CSS solution, the background is rotated as well, as seen in the 30 degree rotations.
       </p>
 
   		<div class="fa-4x">
@@ -32,10 +39,36 @@
   		  <i class="fas fa-magic" data-fa-transform="flip-v flip-h" style="background:MistyRose"></i>
   		</div>
 
+      <br />
+
+      <pre><code>
+  &lt;!-- HTML - Same as Font Awesome 5 --&gt;
+  &lt;div class="fa-4x"&gt;
+    &lt;i class="fas fa-magic" data-fa-transform="rotate-90"  style="background:MistyRose"&gt;&lt;/i&gt;
+    &lt;i class="fas fa-magic" data-fa-transform="rotate-180" style="background:MistyRose"&gt;&lt;/i&gt;
+    &lt;i class="fas fa-magic" data-fa-transform="rotate-270" style="background:MistyRose"&gt;&lt;/i&gt;
+    &lt;i class="fas fa-magic" data-fa-transform="rotate-30"  style="background:MistyRose"&gt;&lt;/i&gt;
+    &lt;i class="fas fa-magic" data-fa-transform="rotate--30" style="background:MistyRose"&gt;&lt;/i&gt;
+
+    &lt;i class="fas fa-magic" data-fa-transform="flip-v"     style="background:MistyRose"&gt;&lt;/i&gt;
+    &lt;i class="fas fa-magic" data-fa-transform="flip-h"     style="background:MistyRose"&gt;&lt;/i&gt;
+    &lt;i class="fas fa-magic" data-fa-transform="flip-v flip-h" style="background:MistyRose"&gt;&lt;/i&gt;
+  &lt;/div&gt;
+      </code></pre>
+
+      <hr />
+
       <h2>Layering, Text, & Counters</h2>
 
       <p>
         <a href="https://fontawesome.com/how-to-use/on-the-web/styling/layering">Compare with the Font Awesome SVG + JS Examples</a>
+      </p>
+
+      <p class="alert alert-info">
+        <strong>Difference:</strong>
+        Font Awesome 5 Power Transforms support decimals in the
+        <code>shrink</code>, <code>up</code>, <code>down</code>, <code>left</code>, and <code>right</code>
+        Power Transforms.  In the CSS solution, the decimal portions are ignored.
       </p>
 
   		<div class="fa-4x">
@@ -52,8 +85,8 @@
   		  <span class="fa-layers fa-fw" style="background:MistyRose">
   		    <i class="fas fa-play" data-fa-transform="rotate--90 grow-2"></i>
   		    <i class="fas fa-sun fa-inverse" data-fa-transform="shrink-10 up-2"></i>
-  		    <i class="fas fa-moon fa-inverse" data-fa-transform="shrink-11 down-4 left-4"></i>
-  		    <i class="fas fa-star fa-inverse" data-fa-transform="shrink-11 down-4 right-4"></i>
+  		    <i class="fas fa-moon fa-inverse" data-fa-transform="shrink-11 down-4.2 left-4"></i>
+  		    <i class="fas fa-star fa-inverse" data-fa-transform="shrink-11 down-4.2 right-4"></i>
   		  </span>
 
   		  <span class="fa-layers fa-fw" style="background:MistyRose">
@@ -67,52 +100,101 @@
   		  </span>
   		</div>
 
+      <br />
 
-      <h2>Layering with Glow</h2>
+      <pre><code>
+  &lt;div class="fa-4x"&gt;
+    &lt;span class="fa-layers fa-fw" style="background:MistyRose"&gt;
+      &lt;i class="fas fa-circle" style="color:Tomato"&gt;&lt;/i&gt;
+      &lt;i class="fa-inverse fas fa-times" data-fa-transform="shrink-6"&gt;&lt;/i&gt;
+    &lt;/span&gt;
 
-      <p>
-        A special "glow" transform is added to outline icons.
+    &lt;span class="fa-layers fa-fw" style="background:MistyRose"&gt;
+      &lt;i class="fas fa-bookmark"&gt;&lt;/i&gt;
+      &lt;i class="fa-inverse fas fa-heart" data-fa-transform="shrink-10 up-2" style="color:Tomato"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+
+    &lt;span class="fa-layers fa-fw" style="background:MistyRose"&gt;
+      &lt;i class="fas fa-play" data-fa-transform="rotate--90 grow-2"&gt;&lt;/i&gt;
+      &lt;i class="fas fa-sun fa-inverse"  data-fa-transform="shrink-10 up-2"&gt;&lt;/i&gt;
+      &lt;i class="fas fa-moon fa-inverse" data-fa-transform="shrink-11 down-4.2 left-4"&gt;&lt;/i&gt;
+      &lt;i class="fas fa-star fa-inverse" data-fa-transform="shrink-11 down-4.2 right-4"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+
+    &lt;span class="fa-layers fa-fw" style="background:MistyRose"&gt;
+      &lt;i class="fas fa-calendar"&gt;&lt/i&gt;
+      &lt;span class="fa-layers-text fa-inverse" data-fa-transform="shrink-8 down-3" style="font-weight:900"&gt;27&lt;/span&gt;
+    &lt;/span&gt;
+
+    &lt;span class="fa-layers fa-fw" style="background:MistyRose"&gt;
+      &lt;i class="fas fa-certificate"&gt;&lt;/i&gt;
+      &lt;span class="fa-layers-text fa-inverse" data-fa-transform="shrink-11.5 rotate--30" style="font-weight:900"&gt;NEW&lt;/span&gt;
+    &lt;/span&gt;
+  &lt;/div&gt;
+      </code></pre>
+
+      <hr />
+
+      <h2>Layering with <code>glow</code></h2>
+
+      <p class="alert alert-success">
+        <strong>Unique to this CSS solution</strong>, a special <code>glow</code> transform has been added to outline icons.
         The outline colour defaults to white, but also takes into account some Bootstrap 3 background classes on parent elements.
+        <strong>You may need to edit the colour options depending on your template.</strong>
       </p>
 
       <div class="row">
         <div class="col-sm-3">
       		<p class="alert alert-success text-center">
       			<span class="fa-layers fa-fw fa-4x">
-      				<span class="fas fa-file-alt"></span>
-      				<span class="fas fa-plus" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
+      				<i class="fas fa-file-alt"></i>
+      				<i class="fas fa-plus" data-fa-transform="shrink-10 right-6 down-5 glow"></i>
       			</span>
       		</p>
         </div>
         <div class="col-sm-3">
       		<p class="alert alert-warning text-center">
       			<span class="fa-layers fa-fw fa-4x">
-      				<span class="fas fa-file-alt"></span>
-      				<span class="fas fa-save" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
+      				<i class="fas fa-file-alt"></i>
+      				<i class="fas fa-save" data-fa-transform="shrink-10 right-6 down-5 glow"></i>
       			</span>
       		</p>
         </div>
         <div class="col-sm-3">
       		<p class="alert alert-danger text-center">
       			<span class="fa-layers fa-fw fa-4x">
-      				<span class="fas fa-file-alt"></span>
-      				<span class="fas fa-trash" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
+      				<i class="fas fa-file-alt"></i>
+      				<i class="fas fa-trash" data-fa-transform="shrink-10 right-6 down-5 glow"></i>
       			</span>
       		</p>
         </div>
         <div class="col-sm-3">
       		<p class="alert alert-info text-center">
       			<span class="fa-layers fa-fw fa-4x">
-      				<span class="fas fa-file-alt"></span>
-      				<span class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5 glow"></span>
+      				<i class="fas fa-file-alt"></i>
+      				<i class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5 glow"></i>
       			</span>
       		</p>
         </div>
       </div>
 
+      <br />
+
+      <pre><code>
+  &lt;p class="alert alert-info text-center"&gt;
+    &lt;span class="fa-layers fa-fw fa-4x"&gt;
+      &lt;i class="fas fa-file-alt"&gt;&lt;/i&gt;
+      &lt;i class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5 glow"&gt;&lt;/i&gt;
+    &lt;/span&gt;
+  &lt;/p>
+      </code></pre>
+
+      <hr />
+
       <h2>Masking</h2>
 
-      <p>
+      <p class="alert alert-warning">
+        <strong>Difference:</strong>
         Recreating <a href="https://fontawesome.com/how-to-use/on-the-web/styling/masking">masking using the exact Font Awesome 5 syntax</a> in CSS would be huge.
         Every icon class would have to be considered.  It's not feasable.
         Instead, similar functionality is provided with the <code>.fa-layers</code> class.
@@ -140,6 +222,15 @@
         </div>
       </div>
 
+      <br />
+
+      <pre><code>
+  &lt;span class="fa-layers fa-5x fa-fw bg-info"&gt;
+    &lt;i class="fas fa-square"&gt;&lt;/i&gt;
+    &lt;i class="fas fa-headphones" data-fa-transform="shrink-6" data-fa-mask="fas fa-square"&gt;&lt;/i&gt;
+  &lt;/span&gt;
+      </code></pre>
+
       <h2>Examples from Around the Web</h2>
 
       <div class="row">
@@ -161,17 +252,27 @@
         </div>
       </div>
 
-      <p>
-      </p>
+    </div>
 
-      <h2>Links</h2>
-
-      <ul>
-        <li><a href="http://saultstemarie.ca/">Project by the City of Sault Ste. Marie</a></li>
-        <li><a href="https://github.com/cityssm/fa5-power-transforms-css">Grab the CSS on GitHub</a></li>
-        <li><a href="http://getbootstrap.com/docs/3.3/">Bootstrap 3</a></li>
-        <li><a href="https://fontawesome.com/">Font Awesome 5</a></li>
-      </ul>
+    <div class="bg-info" style="padding:1em 0">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <strong>Resources</strong>
+            <ul class="list-unstyled">
+              <li><a href="https://fontawesome.com/">Font Awesome 5</a></li>
+              <li><a href="http://getbootstrap.com/docs/3.3/">Bootstrap 3</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-6">
+            <strong>Links</strong>
+            <ul class="list-unstyled">
+              <li><a href="https://github.com/cityssm/fa5-power-transforms-css">Grab the CSS on GitHub</a></li>
+              <li><a href="http://saultstemarie.ca/">A project by the City of Sault Ste. Marie</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
