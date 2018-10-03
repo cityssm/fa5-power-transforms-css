@@ -96,6 +96,7 @@ $base-width-half: $base-width / 2;
 	$bg-success-color: #dff0d8;
 	$bg-info-color: #d9edf7;
 
+
 	&[data-fa-mask] {
 		color: $glow-default;
 
@@ -123,6 +124,7 @@ $base-width-half: $base-width / 2;
 			color: $bg-info-color;
 		}
 	}
+
 
 	&[data-fa-transform*='glow'] {
 		text-shadow: -0.1em 0 0 $glow-default, 0.1em 0 $glow-default, 0 0.1em 0 $glow-default, 0 -0.1em 0 $glow-default, 0.1em 0.1em 0 $glow-default, -0.1em -0.1em 0 $glow-default, -0.1em 0.1em 0 $glow-default, 0.1em -0.1em 0 $glow-default;
