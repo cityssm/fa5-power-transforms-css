@@ -203,7 +203,8 @@ $bg-info-active-color: #c4e3f3;
 		.bg-danger &,
 		.list-group-item-danger &,
 		tr.danger &,
-		td.danger & {
+		td.danger &,
+		&[data-fa-transform*='glow-danger'] {
 			text-shadow: -2px 0 0 $bg-danger-color, 2px 0 $bg-danger-color, 0 2px 0 $bg-danger-color, 0 -2px 0 $bg-danger-color, 2px 2px 0 $bg-danger-color, -2px -2px 0 $bg-danger-color, -2px 2px 0 $bg-danger-color, 2px -2px 0 $bg-danger-color;
 			-webkit-text-stroke-color: $bg-danger-color;
 		}
@@ -220,7 +221,8 @@ $bg-info-active-color: #c4e3f3;
 		.bg-warning &,
 		.list-group-item-warning &,
 		tr.warning &,
-		td.warning & {
+		td.warning &,
+		&[data-fa-transform*='glow-warning'] {
 			text-shadow: -2px 0 0 $bg-warning-color, 2px 0 $bg-warning-color, 0 2px 0 $bg-warning-color, 0 -2px 0 $bg-warning-color, 2px 2px 0 $bg-warning-color, -2px -2px 0 $bg-warning-color, -2px 2px 0 $bg-warning-color, 2px -2px 0 $bg-warning-color;
 			-webkit-text-stroke-color: $bg-warning-color;
 		}
@@ -237,7 +239,8 @@ $bg-info-active-color: #c4e3f3;
 		.bg-success &,
 		.list-group-item-success &,
 		tr.success &,
-		td.success & {
+		td.success &,
+		&[data-fa-transform*='glow-success'] {
 			text-shadow: -2px 0 0 $bg-success-color, 2px 0 $bg-success-color, 0 2px 0 $bg-success-color, 0 -2px 0 $bg-success-color, 2px 2px 0 $bg-success-color, -2px -2px 0 $bg-success-color, -2px 2px 0 $bg-success-color, 2px -2px 0 $bg-success-color;
 			-webkit-text-stroke-color: $bg-success-color;
 		}
@@ -254,7 +257,8 @@ $bg-info-active-color: #c4e3f3;
 		.bg-info &,
 		.list-group-item-info &,
 		tr.info &,
-		td.info & {
+		td.info &,
+		&[data-fa-transform*='glow-info'] {
 			text-shadow: -2px 0 0 $bg-info-color, 2px 0 $bg-info-color, 0 2px 0 $bg-info-color, 0 -2px 0 $bg-info-color, 2px 2px 0 $bg-info-color, -2px -2px 0 $bg-info-color, -2px 2px 0 $bg-info-color, 2px -2px 0 $bg-info-color;
 			-webkit-text-stroke-color: $bg-info-color;
 		}
@@ -265,6 +269,11 @@ $bg-info-active-color: #c4e3f3;
 		button.list-group-item-info:focus & {
 			text-shadow: -2px 0 0 $bg-info-active-color, 2px 0 $bg-info-active-color, 0 2px 0 $bg-info-active-color, 0 -2px 0 $bg-info-active-color, 2px 2px 0 $bg-info-active-color, -2px -2px 0 $bg-info-active-color, -2px 2px 0 $bg-info-active-color, 2px -2px 0 $bg-info-active-color;
 			-webkit-text-stroke-color: $bg-info-active-color;
+		}
+
+		&[data-fa-transform*='glow-black'] {
+			text-shadow: -2px 0 0 #000, 2px 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 2px 2px 0 #000, -2px -2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000;
+			-webkit-text-stroke-color: #000;
 		}
 	}
 }
