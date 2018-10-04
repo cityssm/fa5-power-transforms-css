@@ -4,8 +4,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>fa5-power-transforms-css Test Page</title>
+
+    <title>fa5-power-transforms-css - Test Page</title>
+    <meta name="description" content="A CSS implementation of the Power Transform functionality in Font Awesome 5">
+    <meta name="keywords" content="Font Awesome 5, Power Transforms, CSS, Bootstrap 3">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -17,6 +19,27 @@
 
       <a href="https://github.com/cityssm/fa5-power-transforms-css"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
+      <div class="alert alert-success">
+        <span class="fa-7x fa-layers fa-pull-right" style="color:#000">
+          <i class="fas fa-circle" data-fa-transform="shrink-3 up-3" style="color:#ff0"></i>
+          <i class="far fa-grin-beam" data-fa-transform="shrink-3 up-3"></i>
+          <i class="fas fa-thumbs-up" data-fa-transform="shrink-10 right-4 down-1 glow-black rotate--20" style="color:#ff0"></i>
+          <i class="fas fa-thumbs-down" data-fa-transform="shrink-10 left-4 down-1 glow-black rotate-200" style="color:#ff0"></i>
+        </span>
+        <p>
+          Font Awesome 5 introduces a feature called Power Transforms,
+          which opens developers up to limitless customizations of their icons.
+          The problem is, these features are only available to users of the SVG + JS version.
+          What about the Web Fonts users?
+        </p>
+        <p>
+          This project attempts to recreate the key features of Font Awesome 5 Power Transforms using straight CSS,
+          while keeping the same syntax as Font Awesome 5.  Just drop in a little extra CSS and enjoy!
+        </p>
+      </div>
+
+      <hr />
+
       <h2>Rotating and Flipping</h2>
 
       <p>
@@ -25,7 +48,8 @@
 
       <p class="alert alert-info">
         <strong>Difference:</strong>
-        Font Awesome 5 Power Transforms rotations do not rotate the background.  In the CSS solution, the background is rotated as well, as seen in the 30 degree rotations.
+        Font Awesome 5 Power Transforms rotations do not rotate the background.
+        In the CSS solution, the background is rotated as well, as seen in the 30 degree rotations.
       </p>
 
   		<div class="fa-4x">
@@ -338,28 +362,25 @@
         <div class="col-sm-4">
           <div class="panel panel-default">
             <div class="panel-heading text-center">
-              Using <code>-webkit-text-stroke</code>
+              Using <code>glow-black</code>
             </div>
             <div class="panel-body">
               <div class="text-center">
                 <span class="fa-layers fa-fw fa-4x">
-                  <i class="fas fa-play" data-fa-transform="rotate-30 shrink-1" style="color:#ff6;-webkit-text-stroke:3px #000"></i>
+                  <i class="fas fa-play" data-fa-transform="rotate-30 shrink-1 glow-black" style="color:#ff6"></i>
                   <i class="fas fa-exclamation" data-fa-transform="shrink-10 left-1 up-1"></i>
                 </span>
 
                 <span class="fa-layers fa-fw fa-4x">
 
-                  <i class="fas fa-truck-monster" data-fa-transform="up-1" style="color:#0f3;-webkit-text-stroke:2px #000;"></i>
+                  <i class="fas fa-truck-monster" data-fa-transform="up-1 glow-black" style="color:#0f3"></i>
                   <i class="fas fa-circle" data-fa-transform="shrink-7 down-2 left-4" style="color:#000;"></i>
-                  <i class="fas fa-cog fa-spin" data-fa-transform="shrink-7 down-2 left-4" style="color:#333;-webkit-text-stroke:2px #000;"></i>
+                  <i class="fas fa-cog fa-spin" data-fa-transform="shrink-7 down-2 left-4 glow-black" style="color:#333"></i>
                   <i class="fas fa-circle" data-fa-transform="shrink-7 down-2 right-4" style="color:#000;"></i>
-                  <i class="fas fa-cog fa-spin" data-fa-transform="shrink-7 down-2 right-4" style="color:#333;-webkit-text-stroke:2px #000;"></i>
+                  <i class="fas fa-cog fa-spin" data-fa-transform="shrink-7 down-2 right-4 glow-black" style="color:#333"></i>
                 </span>
 
               </div>
-            </div>
-            <div class="panel-footer text-center">
-              <em>Not supported by Internet Explorer</em>
             </div>
           </div>
         </div>
