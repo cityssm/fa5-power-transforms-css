@@ -33,7 +33,9 @@ The Web Fonts version does offer [stacking](https://fontawesome.com/how-to-use/o
 `glow`
 - Adds an outline to the icon for some really fancy layering.
 - Defaults to white, with some Bootstrap 3 background color options.
+- `glow-black`, `glow-danger`, `glow-warning`, `glow-info`, `glow-success` variations available to force glow color.
 - *If you choose to use `glow`, you may need to add your own background color support.*
+
 
 `data-fa-mask=""`
 - Slightly different than the Font Awesome 5 specification.
