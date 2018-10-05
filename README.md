@@ -35,12 +35,14 @@ Unlike the Font Awesome 5 implementation, the following options are only availab
 `up-n`, `down-n`, `left-n`, `right-n`
 - Supports whole numbers from 1 to 8.
 
+
 ## Background Color Magic
+
+*Note that the following attributes may require updated the CSS for your template.*
 
 `data-fa-mask=""`
 - Slightly different than the Font Awesome 5 specification.
 - The existence of this attribute will **attempt** to set the icon's color to that of the background.
-- *If you choose to use `data-fa-mask`, you may need to add your own background color support.*
 
 `data-fa-glow=""`
 - Adds an outline to the icon for some really fancy layering.
@@ -49,7 +51,7 @@ Unlike the Font Awesome 5 implementation, the following options are only availab
 - Defaults to an outline width of `4px`.
   - Include a value of `1px`, `2px`, or `3px` for a thinner width (or no width in IE).
   - Include a value from `5px` to `9px` for a thicker width.  (Not supported by IE.)
-- *If you choose to use `data-fa-glow`, you may need to add your own background color support.*
+
 
 ## I want to see it in action!
 
