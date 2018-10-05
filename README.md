@@ -16,32 +16,40 @@ This project attempts to recreate some of the key Power Transform features in st
 ## Which `data-fa-transform` options are recreated?
 
 `rotate-n`
-- Supports whole numbers only, -359 to 359.
+- Rotates the icon by a given number of degrees.
+- Supports whole numbers only, multiples of 5, -355 to 355.
 
 `flip-h`, `flip-h`
+- Flips an icon horizontally, vertically, or both.
 
-### `.fa-layers`
+`shrink-n`, `grow-n`
+- Reduces the size, or increases the size.
+- Supports whole numbers from 1 to 16.
+
+### `.fa-layers` only
 
 The Web Fonts version does offer [stacking](https://fontawesome.com/how-to-use/on-the-web/styling/stacking-icons) using the `.fa-stack` class, but the `.fa-layers` class is far more powerful.
 
-`shrink-n`, `grow-n`
-- Supports whole numbers from 1 to 16.
+Unlike the Font Awesome 5 implementation, the following options are only available to icons inside a `.fa-layers` container.
 
 `up-n`, `down-n`, `left-n`, `right-n`
 - Supports whole numbers from 1 to 8.
 
-`glow`
-- Adds an outline to the icon for some really fancy layering.
-- Defaults to white, with some Bootstrap 3 background color options.
-- `glow-black`, `glow-danger`, `glow-warning`, `glow-info`, `glow-success` variations available to force glow color.
-- *If you choose to use `glow`, you may need to add your own background color support.*
-
+## Background Color Magic
 
 `data-fa-mask=""`
 - Slightly different than the Font Awesome 5 specification.
 - The existence of this attribute will **attempt** to set the icon's color to that of the background.
 - *If you choose to use `data-fa-mask`, you may need to add your own background color support.*
 
+`data-fa-glow=""`
+- Adds an outline to the icon for some really fancy layering.
+- Defaults to white, with some Bootstrap 3 background color options.
+- Include a value of `black`, `danger`, `warning`, `info`, or `success` to force a specific glow color.
+- Defaults to an outline width of `4px`.
+  - Include a value of `1px`, `2px`, or `3px` for a thinner width (or no width in IE).
+  - Include a value from `5px` to `9px` for a thicker width.  (Not supported by IE.)
+- *If you choose to use `data-fa-glow`, you may need to add your own background color support.*
 
 ## I want to see it in action!
 

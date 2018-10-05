@@ -21,6 +21,11 @@ $bg-success-active-color: #d0e9c6;
 $bg-info-color: #d9edf7;
 $bg-info-active-color: #c4e3f3;
 
+/**
+ * fa-layers
+ * - supports up, down, left, right
+ */
+
 .fa-layers {
 	position: relative;
 	display: inline-block;
@@ -47,6 +52,9 @@ $bg-info-active-color: #c4e3f3;
 		line-height: inherit;
 		text-align: center;
 	}
+	/*
+	 * SHIFTING
+	 */
 	@for $i from 1 through 8 {
 		& [data-fa-transform*='up-#{$i}'] {
 			top: -($i / 8 * 50%);
@@ -78,10 +86,10 @@ $bg-info-active-color: #c4e3f3;
 	/*
 	 * ROTATE
 	 */
-	@for $i from 1 through 35 {
-		&[data-fa-transform*='rotate-#{$i * 10}'],
-		&[data-fa-transform*='rotate-#{$i * 10 - 360}'] {
-			transform: rotate(10deg * $i);
+	@for $i from 1 through 71 {
+		&[data-fa-transform*='rotate-#{$i * 5}'],
+		&[data-fa-transform*='rotate-#{$i * 5 - 360}'] {
+			transform: rotate(5deg * $i);
 		}
 	}
 	/*
@@ -98,19 +106,26 @@ $bg-info-active-color: #c4e3f3;
 	&[data-fa-transform*='flip-h'][data-fa-transform*='flip-v'] {
 		transform: scale(-1, -1);
 	}
-	// shrink
+	/*
+	 * SHRINK
+	 */
 	@for $i from 1 through 16 {
 		&[data-fa-transform*='shrink-#{$i}'] {
 			font-size: 1em - $i / 16;
 		}
 	}
+	/*
+	 * GROW
+	 */
 	@for $i from 1 through 16 {
 		&[data-fa-transform*='grow-#{$i}'] {
 			font-size: 1em + $i / 16;
 		}
 	}
 
-	// glow
+	/*
+	 * MASKING
+	 */
 
 	&[data-fa-mask] {
 
@@ -184,18 +199,27 @@ $bg-info-active-color: #c4e3f3;
 		}
 	}
 
+	/*
+	 * GLOWING
+	 */
 
-	&[data-fa-transform*='glow'] {
-		text-shadow: -2px 0 0 $bg-default-color, 2px 0 $bg-default-color, 0 2px 0 $bg-default-color, 0 -2px 0 $bg-default-color, 2px 2px 0 $bg-default-color, -2px -2px 0 $bg-default-color, -2px 2px 0 $bg-default-color, 2px -2px 0 $bg-default-color;
+	&[data-fa-glow] {
+		text-shadow: -2px 0 0 $bg-default-color, 2px 0 $bg-default-color, 0 2px 0 $bg-default-color, 0 -2px 0 $bg-default-color, 1.5px 1.5px 0 $bg-default-color, -1.5px -1.5px 0 $bg-default-color, -1.5px 1.5px 0 $bg-default-color, 1.5px -1.5px 0 $bg-default-color;
 		-webkit-text-stroke-width: 4px;
 		-webkit-text-stroke-color: $bg-default-color;
 		paint-order: stroke fill;
+
+		@for $i from 1 through 9 {
+			&[data-fa-glow*='#{$i}px'] {
+				-webkit-text-stroke-width: #{$i}px;
+			}
+		}
 
 		a.list-group-item:hover &,
 		a.list-group-item:focus &,
 		button.list-group-item:hover &,
 		button.list-group-item:focus & {
-			text-shadow: -2px 0 0 $bg-default-active-color, 2px 0 $bg-default-active-color, 0 2px 0 $bg-default-active-color, 0 -2px 0 $bg-default-active-color, 2px 2px 0 $bg-default-active-color, -2px -2px 0 $bg-default-active-color, -2px 2px 0 $bg-default-active-color, 2px -2px 0 $bg-default-active-color;
+			text-shadow: -2px 0 0 $bg-default-active-color, 2px 0 $bg-default-active-color, 0 2px 0 $bg-default-active-color, 0 -2px 0 $bg-default-active-color, 1.5px 1.5px 0 $bg-default-active-color, -1.5px -1.5px 0 $bg-default-active-color, -1.5px 1.5px 0 $bg-default-active-color, 1.5px -1.5px 0 $bg-default-active-color;
 			-webkit-text-stroke-color: $bg-default-active-color;
 		}
 
@@ -204,8 +228,8 @@ $bg-info-active-color: #c4e3f3;
 		.list-group-item-danger &,
 		tr.danger &,
 		td.danger &,
-		&[data-fa-transform*='glow-danger'] {
-			text-shadow: -2px 0 0 $bg-danger-color, 2px 0 $bg-danger-color, 0 2px 0 $bg-danger-color, 0 -2px 0 $bg-danger-color, 2px 2px 0 $bg-danger-color, -2px -2px 0 $bg-danger-color, -2px 2px 0 $bg-danger-color, 2px -2px 0 $bg-danger-color;
+		&[data-fa-glow*='danger'] {
+			text-shadow: -2px 0 0 $bg-danger-color, 2px 0 $bg-danger-color, 0 2px 0 $bg-danger-color, 0 -2px 0 $bg-danger-color, 1.5px 1.5px 0 $bg-danger-color, -1.5px -1.5px 0 $bg-danger-color, -1.5px 1.5px 0 $bg-danger-color, 1.5px -1.5px 0 $bg-danger-color;
 			-webkit-text-stroke-color: $bg-danger-color;
 		}
 
@@ -213,7 +237,7 @@ $bg-info-active-color: #c4e3f3;
 		a.list-group-item-danger:focus &,
 		button.list-group-item-danger:hover &,
 		button.list-group-item-danger:focus & {
-			text-shadow: -2px 0 0 $bg-danger-active-color, 2px 0 $bg-danger-active-color, 0 2px 0 $bg-danger-active-color, 0 -2px 0 $bg-danger-active-color, 2px 2px 0 $bg-danger-active-color, -2px -2px 0 $bg-danger-active-color, -2px 2px 0 $bg-danger-active-color, 2px -2px 0 $bg-danger-active-color;
+			text-shadow: -2px 0 0 $bg-danger-active-color, 2px 0 $bg-danger-active-color, 0 2px 0 $bg-danger-active-color, 0 -2px 0 $bg-danger-active-color, 1.5px 1.5px 0 $bg-danger-active-color, -1.5px -1.5px 0 $bg-danger-active-color, -1.5px 1.5px 0 $bg-danger-active-color, 1.5px -1.5px 0 $bg-danger-active-color;
 			-webkit-text-stroke-color: $bg-danger-active-color;
 		}
 
@@ -222,8 +246,8 @@ $bg-info-active-color: #c4e3f3;
 		.list-group-item-warning &,
 		tr.warning &,
 		td.warning &,
-		&[data-fa-transform*='glow-warning'] {
-			text-shadow: -2px 0 0 $bg-warning-color, 2px 0 $bg-warning-color, 0 2px 0 $bg-warning-color, 0 -2px 0 $bg-warning-color, 2px 2px 0 $bg-warning-color, -2px -2px 0 $bg-warning-color, -2px 2px 0 $bg-warning-color, 2px -2px 0 $bg-warning-color;
+		&[data-fa-glow*='warning'] {
+			text-shadow: -2px 0 0 $bg-warning-color, 2px 0 $bg-warning-color, 0 2px 0 $bg-warning-color, 0 -2px 0 $bg-warning-color, 1.5px 1.5px 0 $bg-warning-color, -1.5px -1.5px 0 $bg-warning-color, -1.5px 1.5px 0 $bg-warning-color, 1.5px -1.5px 0 $bg-warning-color;
 			-webkit-text-stroke-color: $bg-warning-color;
 		}
 
@@ -231,7 +255,7 @@ $bg-info-active-color: #c4e3f3;
 		a.list-group-item-warning:focus &,
 		button.list-group-item-warning:hover &,
 		button.list-group-item-warning:focus & {
-			text-shadow: -2px 0 0 $bg-warning-active-color, 2px 0 $bg-warning-active-color, 0 2px 0 $bg-warning-active-color, 0 -2px 0 $bg-warning-active-color, 2px 2px 0 $bg-warning-active-color, -2px -2px 0 $bg-warning-active-color, -2px 2px 0 $bg-warning-active-color, 2px -2px 0 $bg-warning-active-color;
+			text-shadow: -2px 0 0 $bg-warning-active-color, 2px 0 $bg-warning-active-color, 0 2px 0 $bg-warning-active-color, 0 -2px 0 $bg-warning-active-color, 1.5px 1.5px 0 $bg-warning-active-color, -1.5px -1.5px 0 $bg-warning-active-color, -1.5px 1.5px 0 $bg-warning-active-color, 1.5px -1.5px 0 $bg-warning-active-color;
 			-webkit-text-stroke-color: $bg-warning-active-color;
 		}
 
@@ -240,8 +264,8 @@ $bg-info-active-color: #c4e3f3;
 		.list-group-item-success &,
 		tr.success &,
 		td.success &,
-		&[data-fa-transform*='glow-success'] {
-			text-shadow: -2px 0 0 $bg-success-color, 2px 0 $bg-success-color, 0 2px 0 $bg-success-color, 0 -2px 0 $bg-success-color, 2px 2px 0 $bg-success-color, -2px -2px 0 $bg-success-color, -2px 2px 0 $bg-success-color, 2px -2px 0 $bg-success-color;
+		&[data-fa-glow*='success'] {
+			text-shadow: -2px 0 0 $bg-success-color, 2px 0 $bg-success-color, 0 2px 0 $bg-success-color, 0 -2px 0 $bg-success-color, 1.5px 1.5px 0 $bg-success-color, -1.5px -1.5px 0 $bg-success-color, -1.5px 1.5px 0 $bg-success-color, 1.5px -1.5px 0 $bg-success-color;
 			-webkit-text-stroke-color: $bg-success-color;
 		}
 
@@ -249,7 +273,7 @@ $bg-info-active-color: #c4e3f3;
 		a.list-group-item-success:focus &,
 		button.list-group-item-success:hover &,
 		button.list-group-item-success:focus & {
-			text-shadow: -2px 0 0 $bg-success-active-color, 2px 0 $bg-success-active-color, 0 2px 0 $bg-success-active-color, 0 -2px 0 $bg-success-active-color, 2px 2px 0 $bg-success-active-color, -2px -2px 0 $bg-success-active-color, -2px 2px 0 $bg-success-active-color, 2px -2px 0 $bg-success-active-color;
+			text-shadow: -2px 0 0 $bg-success-active-color, 2px 0 $bg-success-active-color, 0 2px 0 $bg-success-active-color, 0 -2px 0 $bg-success-active-color, 1.5px 1.5px 0 $bg-success-active-color, -1.5px -1.5px 0 $bg-success-active-color, -1.5px 1.5px 0 $bg-success-active-color, 1.5px -1.5px 0 $bg-success-active-color;
 			-webkit-text-stroke-color: $bg-success-active-color;
 		}
 
@@ -258,8 +282,8 @@ $bg-info-active-color: #c4e3f3;
 		.list-group-item-info &,
 		tr.info &,
 		td.info &,
-		&[data-fa-transform*='glow-info'] {
-			text-shadow: -2px 0 0 $bg-info-color, 2px 0 $bg-info-color, 0 2px 0 $bg-info-color, 0 -2px 0 $bg-info-color, 2px 2px 0 $bg-info-color, -2px -2px 0 $bg-info-color, -2px 2px 0 $bg-info-color, 2px -2px 0 $bg-info-color;
+		&[data-fa-glow*='info'] {
+			text-shadow: -2px 0 0 $bg-info-color, 2px 0 $bg-info-color, 0 2px 0 $bg-info-color, 0 -2px 0 $bg-info-color, 1.5px 1.5px 0 $bg-info-color, -1.5px -1.5px 0 $bg-info-color, -1.5px 1.5px 0 $bg-info-color, 1.5px -1.5px 0 $bg-info-color;
 			-webkit-text-stroke-color: $bg-info-color;
 		}
 
@@ -267,13 +291,19 @@ $bg-info-active-color: #c4e3f3;
 		a.list-group-item-info:focus &,
 		button.list-group-item-info:hover &,
 		button.list-group-item-info:focus & {
-			text-shadow: -2px 0 0 $bg-info-active-color, 2px 0 $bg-info-active-color, 0 2px 0 $bg-info-active-color, 0 -2px 0 $bg-info-active-color, 2px 2px 0 $bg-info-active-color, -2px -2px 0 $bg-info-active-color, -2px 2px 0 $bg-info-active-color, 2px -2px 0 $bg-info-active-color;
+			text-shadow: -2px 0 0 $bg-info-active-color, 2px 0 $bg-info-active-color, 0 2px 0 $bg-info-active-color, 0 -2px 0 $bg-info-active-color, 1.5px 1.5px 0 $bg-info-active-color, -1.5px -1.5px 0 $bg-info-active-color, -1.5px 1.5px 0 $bg-info-active-color, 1.5px -1.5px 0 $bg-info-active-color;
 			-webkit-text-stroke-color: $bg-info-active-color;
 		}
 
-		&[data-fa-transform*='glow-black'] {
-			text-shadow: -2px 0 0 #000, 2px 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 2px 2px 0 #000, -2px -2px 0 #000, -2px 2px 0 #000, 2px -2px 0 #000;
+		&[data-fa-glow*='black'] {
+			text-shadow: -2px 0 0 #000, 2px 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1.5px 1.5px 0 #000, -1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px -1.5px 0 #000;
 			-webkit-text-stroke-color: #000;
+		}
+
+		&[data-fa-glow*='1px'],
+		&[data-fa-glow*='2px'],
+		&[data-fa-glow*='3px'] {
+			text-shadow: none;
 		}
 	}
 }
