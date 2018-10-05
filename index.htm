@@ -24,7 +24,9 @@
           <i class="fas fa-circle" data-fa-transform="shrink-3 up-3" style="color:#ff0"></i>
           <i class="far fa-grin-beam" data-fa-transform="shrink-3 up-3"></i>
           <i class="fas fa-thumbs-up" data-fa-transform="shrink-10 right-4 down-1 rotate--20" data-fa-glow="black 8px" style="color:#ff0"></i>
+          <i class="fas fa-thumbs-up" data-fa-transform="shrink-10 right-4 down-1 rotate--20" style="color:#ff0"></i>
           <i class="fas fa-thumbs-down" data-fa-transform="shrink-10 left-4 down-1 rotate-200" data-fa-glow="black 8px" style="color:#ff0"></i>
+          <i class="fas fa-thumbs-down" data-fa-transform="shrink-10 left-4 down-1 rotate-200" style="color:#ff0"></i>
         </span>
         <p>
           Font Awesome 5 introduces a feature called Power Transforms,
@@ -169,12 +171,19 @@
         <strong>You may need to edit the colour options depending on your template.</strong>
       </p>
 
+      <p class="alert alert-warning">
+        <strong>Warning:</strong>
+        The `paint-order` CSS property is not supported by Chrome which can cause display issues for `glow` icons.
+        Doubling up the icon declaration, with a glow version on the bottom can solve the problem.
+      </p>
+
       <div class="row">
         <div class="col-sm-3">
       		<p class="text-center">
       			<span class="fa-layers fa-fw fa-4x">
       				<i class="fas fa-file-alt"></i>
       				<i class="fas fa-search" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow></i>
+      				<i class="fas fa-search" data-fa-transform="shrink-10 right-6 down-5"></i>
       			</span>
       		</p>
         </div>
@@ -183,6 +192,7 @@
       			<span class="fa-layers fa-fw fa-4x">
       				<i class="fas fa-file-alt"></i>
       				<i class="fas fa-lock" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow></i>
+      				<i class="fas fa-lock" data-fa-transform="shrink-10 right-6 down-5"></i>
       			</span>
       		</p>
         </div>
@@ -191,6 +201,7 @@
       			<span class="fa-layers fa-fw fa-4x">
       				<i class="fas fa-file-alt"></i>
       				<i class="fas fa-hand-point-up" data-fa-transform="shrink-8 right-3 down-5" data-fa-glow></i>
+      				<i class="fas fa-hand-point-up" data-fa-transform="shrink-8 right-3 down-5"></i>
       			</span>
       		</p>
         </div>
@@ -199,6 +210,7 @@
       			<span class="fa-layers fa-fw fa-4x">
       				<i class="fas fa-file-alt"></i>
       				<i class="fas fa-sync-alt" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow></i>
+      				<i class="fas fa-sync-alt" data-fa-transform="shrink-10 right-6 down-5"></i>
       			</span>
       		</p>
         </div>
@@ -209,7 +221,8 @@
       		<p class="alert alert-success text-center">
       			<span class="fa-layers fa-fw fa-4x">
       				<i class="fas fa-file-alt"></i>
-      				<i class="fas fa-plus" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow></i>
+              <i class="fas fa-plus" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow></i>
+      				<i class="fas fa-plus" data-fa-transform="shrink-10 right-6 down-5"></i>
       			</span>
       		</p>
         </div>
@@ -218,6 +231,7 @@
       			<span class="fa-layers fa-fw fa-4x">
       				<i class="fas fa-file-alt"></i>
       				<i class="fas fa-save" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow></i>
+      				<i class="fas fa-save" data-fa-transform="shrink-10 right-6 down-5"></i>
       			</span>
       		</p>
         </div>
@@ -226,6 +240,7 @@
       			<span class="fa-layers fa-fw fa-4x">
       				<i class="fas fa-file-alt"></i>
       				<i class="fas fa-trash" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow></i>
+      				<i class="fas fa-trash" data-fa-transform="shrink-10 right-6 down-5"></i>
       			</span>
       		</p>
         </div>
@@ -234,6 +249,7 @@
       			<span class="fa-layers fa-fw fa-4x">
       				<i class="fas fa-file-alt"></i>
       				<i class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow></i>
+      				<i class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5"></i>
       			</span>
       		</p>
         </div>
@@ -247,6 +263,7 @@
     &lt;span class="fa-layers fa-fw fa-4x"&gt;
       &lt;i class="fas fa-file-alt"&gt;&lt;/i&gt;
       &lt;i class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5" data-fa-glow&gt;&lt;/i&gt;
+      &lt;i class="fas fa-info-circle" data-fa-transform="shrink-10 right-6 down-5"&gt;&lt;/i&gt;  &lt;!-- Chrome workaround --&gt;
     &lt;/span&gt;
   &lt;/p>
       </code></pre>
@@ -308,6 +325,7 @@
                 <span class="fa-layers fa-fw fa-4x fa-pull-left">
                   <i class="fas fa-file-alt"></i>
                   <i class="fas fa-plus" data-fa-transform="shrink-10 right-5 down-5" data-fa-glow></i>
+                  <i class="fas fa-plus" data-fa-transform="shrink-10 right-5 down-5"></i>
                 </span>
                 <strong>New File</strong><br />
                 Note the <code>data-fa-glow</code> effect changes colour on hover.
@@ -317,6 +335,7 @@
                   <i class="fas fa-file"></i>
                   <i class="fas fa-circle" data-fa-transform="shrink-12 left-1 down-1" data-fa-mask></i>
                   <i class="fas fa-search" data-fa-transform="shrink-10 down-1" data-fa-glow></i>
+                  <i class="fas fa-search" data-fa-transform="shrink-10 down-1"></i>
                 </span>
                 <strong>Find a File</strong><br />
                 Note the <code>data-fa-mask</code> effect changes colour on hover.
@@ -372,20 +391,28 @@
               <div class="text-center">
                 <span class="fa-layers fa-fw fa-4x">
                   <i class="fas fa-play" data-fa-transform="rotate-30 shrink-1" data-fa-glow="black 6px" style="color:#ff6"></i>
+                  <i class="fas fa-play" data-fa-transform="rotate-30 shrink-1" style="color:#ff6"></i>
                   <i class="fas fa-exclamation" data-fa-transform="shrink-10 left-1 up-1"></i>
                 </span>
 
                 <span class="fa-layers fa-fw fa-4x">
                   <i class="fas fa-truck-monster" data-fa-transform="up-1" data-fa-glow="black" style="color:#0f3"></i>
+                  <i class="fas fa-truck-monster" data-fa-transform="up-1" style="color:#0f3"></i>
+
                   <i class="fas fa-circle" data-fa-transform="shrink-7 down-2 left-4" style="color:#000;"></i>
                   <i class="fas fa-cog fa-spin" data-fa-transform="shrink-7 down-2 left-4" data-fa-glow="black" style="color:#333"></i>
+                  <i class="fas fa-cog fa-spin" data-fa-transform="shrink-7 down-2 left-4" style="color:#333"></i>
+
                   <i class="fas fa-circle" data-fa-transform="shrink-7 down-2 right-4" style="color:#000;"></i>
                   <i class="fas fa-cog fa-spin" data-fa-transform="shrink-7 down-2 right-4" data-fa-glow="black" style="color:#333"></i>
+                  <i class="fas fa-cog fa-spin" data-fa-transform="shrink-7 down-2 right-4" style="color:#333"></i>
                 </span>
 
                 <span class="fa-layers fa-fw fa-4x">
                   <i class="fas fa-location-arrow" data-fa-transform="rotate-135 shrink-8 down-2" data-fa-glow="black" style="color:brown"></i>
+                  <i class="fas fa-location-arrow" data-fa-transform="rotate-135 shrink-8 down-2" style="color:brown"></i>
                   <i class="fas fa-poop" data-fa-transform="shrink-6 up-3" data-fa-glow="black" style="color:white"></i>
+                  <i class="fas fa-poop" data-fa-transform="shrink-6 up-3" style="color:white"></i>
                 </span>
 
               </div>
