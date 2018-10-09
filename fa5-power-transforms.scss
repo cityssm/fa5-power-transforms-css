@@ -9,6 +9,9 @@ $base-width-half: $base-width / 2;
 $bg-default-color: #fff;
 $bg-default-active-color: #f5f5f5;
 
+$bg-btn-default-hover-color:  #e6e6e6;
+$bg-btn-default-active-color: #d4d4d4;
+
 $bg-danger-color: #f2dede;
 $bg-danger-active-color: #ebcccc;
 
@@ -293,6 +296,17 @@ $bg-info-active-color: #c4e3f3;
 		button.list-group-item-info:focus & {
 			text-shadow: -2px 0 0 $bg-info-active-color, 2px 0 $bg-info-active-color, 0 2px 0 $bg-info-active-color, 0 -2px 0 $bg-info-active-color, 1.5px 1.5px 0 $bg-info-active-color, -1.5px -1.5px 0 $bg-info-active-color, -1.5px 1.5px 0 $bg-info-active-color, 1.5px -1.5px 0 $bg-info-active-color;
 			-webkit-text-stroke-color: $bg-info-active-color;
+		}
+
+		.btn-default:hover &,
+		.btn-default:focus & {
+			text-shadow: -2px 0 0 $bg-btn-default-hover-color, 2px 0 $bg-btn-default-hover-color, 0 2px 0 $bg-btn-default-hover-color, 0 -2px 0 $bg-btn-default-hover-color, 1.5px 1.5px 0 $bg-btn-default-hover-color, -1.5px -1.5px 0 $bg-btn-default-hover-color, -1.5px 1.5px 0 $bg-btn-default-hover-color, 1.5px -1.5px 0 $bg-btn-default-hover-color;
+			-webkit-text-stroke-color: $bg-btn-default-hover-color;
+		}
+
+		.btn-default:active & {
+			text-shadow: -2px 0 0 $bg-btn-default-active-color, 2px 0 $bg-btn-default-active-color, 0 2px 0 $bg-btn-default-active-color, 0 -2px 0 $bg-btn-default-active-color, 1.5px 1.5px 0 $bg-btn-default-active-color, -1.5px -1.5px 0 $bg-btn-default-active-color, -1.5px 1.5px 0 $bg-btn-default-active-color, 1.5px -1.5px 0 $bg-btn-default-active-color;
+			-webkit-text-stroke-color: $bg-btn-default-active-color;
 		}
 
 		&[data-fa-glow*='black'] {
