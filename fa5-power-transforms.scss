@@ -28,6 +28,9 @@ $bg-btn-warning-color: #f0ad4e;
 $bg-btn-warning-hover-color: #ec971f;
 $bg-btn-warning-active-color: #d58512;
 
+$bg-nav-pills-hover-color: #eeeeee;
+$bg-nav-pills-active-color: #337ab7;
+
 /**
  * fa-layers
  * - supports up, down, left, right
@@ -331,6 +334,17 @@ $bg-btn-warning-active-color: #d58512;
 		.btn-warning:active:focus & {
 			text-shadow: -2px 0 0 $bg-btn-warning-active-color, 2px 0 $bg-btn-warning-active-color, 0 2px 0 $bg-btn-warning-active-color, 0 -2px 0 $bg-btn-warning-active-color, 1.5px 1.5px 0 $bg-btn-warning-active-color, -1.5px -1.5px 0 $bg-btn-warning-active-color, -1.5px 1.5px 0 $bg-btn-warning-active-color, 1.5px -1.5px 0 $bg-btn-warning-active-color;
 			-webkit-text-stroke-color: $bg-btn-warning-active-color;
+		}
+
+		.nav-pills [data-toggle='tab']:hover &,
+		.nav-pills [data-toggle='tab']:focus & {
+			text-shadow: -2px 0 0 $bg-nav-pills-hover-color, 2px 0 $bg-nav-pills-hover-color, 0 2px 0 $bg-nav-pills-hover-color, 0 -2px 0 $bg-nav-pills-hover-color, 1.5px 1.5px 0 $bg-nav-pills-hover-color, -1.5px -1.5px 0 $bg-nav-pills-hover-color, -1.5px 1.5px 0 $bg-nav-pills-hover-color, 1.5px -1.5px 0 $bg-nav-pills-hover-color;
+			-webkit-text-stroke-color: $bg-nav-pills-hover-color;
+		}
+
+		.nav-pills > .active > [data-toggle='tab'] & {
+			text-shadow: -2px 0 0 $bg-nav-pills-active-color, 2px 0 $bg-nav-pills-active-color, 0 2px 0 $bg-nav-pills-active-color, 0 -2px 0 $bg-nav-pills-active-color, 1.5px 1.5px 0 $bg-nav-pills-active-color, -1.5px -1.5px 0 $bg-nav-pills-active-color, -1.5px 1.5px 0 $bg-nav-pills-active-color, 1.5px -1.5px 0 $bg-nav-pills-active-color;
+			-webkit-text-stroke-color: $bg-nav-pills-active-color;
 		}
 
 		&[data-fa-glow*='black'] {
