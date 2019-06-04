@@ -24,6 +24,10 @@ $bg-info-active-color: #c4e3f3;
 $bg-btn-default-hover-color:  #e6e6e6;
 $bg-btn-default-active-color: #d4d4d4;
 
+$bg-btn-success-color: #5cb85c;
+$bg-btn-success-hover-color: #449d44;
+$bg-btn-success-active-color: #398439;
+
 $bg-btn-warning-color: #f0ad4e;
 $bg-btn-warning-hover-color: #ec971f;
 $bg-btn-warning-active-color: #d58512;
@@ -305,6 +309,7 @@ $bg-nav-pills-active-color: #337ab7;
 			-webkit-text-stroke-color: $bg-info-active-color;
 		}
 
+
 		.btn-default:hover &,
 		.btn-default:focus &,
 		.btn-default:active & {
@@ -317,6 +322,26 @@ $bg-nav-pills-active-color: #337ab7;
 			text-shadow: -2px 0 0 $bg-btn-default-active-color, 2px 0 $bg-btn-default-active-color, 0 2px 0 $bg-btn-default-active-color, 0 -2px 0 $bg-btn-default-active-color, 1.5px 1.5px 0 $bg-btn-default-active-color, -1.5px -1.5px 0 $bg-btn-default-active-color, -1.5px 1.5px 0 $bg-btn-default-active-color, 1.5px -1.5px 0 $bg-btn-default-active-color;
 			-webkit-text-stroke-color: $bg-btn-default-active-color;
 		}
+
+
+		.btn-success & {
+			text-shadow: -2px 0 0 $bg-btn-success-color, 2px 0 $bg-btn-success-color, 0 2px 0 $bg-btn-success-color, 0 -2px 0 $bg-btn-success-color, 1.5px 1.5px 0 $bg-btn-success-color, -1.5px -1.5px 0 $bg-btn-success-color, -1.5px 1.5px 0 $bg-btn-success-color, 1.5px -1.5px 0 $bg-btn-success-color;
+			-webkit-text-stroke-color: $bg-btn-success-color;
+		}
+
+		.btn-success:hover &,
+		.btn-success:focus &,
+		.btn-success:active & {
+			text-shadow: -2px 0 0 $bg-btn-success-hover-color, 2px 0 $bg-btn-success-hover-color, 0 2px 0 $bg-btn-success-hover-color, 0 -2px 0 $bg-btn-success-hover-color, 1.5px 1.5px 0 $bg-btn-success-hover-color, -1.5px -1.5px 0 $bg-btn-success-hover-color, -1.5px 1.5px 0 $bg-btn-success-hover-color, 1.5px -1.5px 0 $bg-btn-success-hover-color;
+			-webkit-text-stroke-color: $bg-btn-success-hover-color;
+		}
+
+		.btn-success:active:hover &,
+		.btn-success:active:focus & {
+			text-shadow: -2px 0 0 $bg-btn-success-active-color, 2px 0 $bg-btn-success-active-color, 0 2px 0 $bg-btn-success-active-color, 0 -2px 0 $bg-btn-success-active-color, 1.5px 1.5px 0 $bg-btn-success-active-color, -1.5px -1.5px 0 $bg-btn-success-active-color, -1.5px 1.5px 0 $bg-btn-success-active-color, 1.5px -1.5px 0 $bg-btn-success-active-color;
+			-webkit-text-stroke-color: $bg-btn-success-active-color;
+		}
+
 
 		.btn-warning & {
 			text-shadow: -2px 0 0 $bg-btn-warning-color, 2px 0 $bg-btn-warning-color, 0 2px 0 $bg-btn-warning-color, 0 -2px 0 $bg-btn-warning-color, 1.5px 1.5px 0 $bg-btn-warning-color, -1.5px -1.5px 0 $bg-btn-warning-color, -1.5px 1.5px 0 $bg-btn-warning-color, 1.5px -1.5px 0 $bg-btn-warning-color;
@@ -335,6 +360,7 @@ $bg-nav-pills-active-color: #337ab7;
 			text-shadow: -2px 0 0 $bg-btn-warning-active-color, 2px 0 $bg-btn-warning-active-color, 0 2px 0 $bg-btn-warning-active-color, 0 -2px 0 $bg-btn-warning-active-color, 1.5px 1.5px 0 $bg-btn-warning-active-color, -1.5px -1.5px 0 $bg-btn-warning-active-color, -1.5px 1.5px 0 $bg-btn-warning-active-color, 1.5px -1.5px 0 $bg-btn-warning-active-color;
 			-webkit-text-stroke-color: $bg-btn-warning-active-color;
 		}
+
 
 		.nav-pills [data-toggle='tab']:hover &,
 		.nav-pills [data-toggle='tab']:focus & {
