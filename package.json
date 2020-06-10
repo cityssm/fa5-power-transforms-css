@@ -1,0 +1,19 @@
+{
+  "name": "fa5-power-transforms-css",
+  "version": "0.5.0",
+  "description": "Font Awesome 5 \"Power Transform\" like functionality using straight CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cityssm/fa5-power-transforms-css.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cityssm/fa5-power-transforms-css/issues"
+  },
+  "homepage": "https://github.com/cityssm/fa5-power-transforms-css#readme"
+}
